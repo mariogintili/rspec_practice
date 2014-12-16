@@ -18,4 +18,14 @@ class Game
     puts "Please select rock, paper or scissors"
     gets.chomp
   end
+
+  def play
+    puts call(get_user_input, rand_choice)
+  end
+
+  private
+
+  def rand_choice
+    COMBINATIONS.values.sample
+  end
 end
