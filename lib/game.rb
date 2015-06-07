@@ -9,8 +9,10 @@ class Game
   def call(first_move, second_move)
     if first_move == second_move
       'draw'
-    else
+    elsif COMBINATIONS[first_move] === second_move
       "#{first_move} beats #{COMBINATIONS[first_move]}"
+    else
+      "#{second_move} beats #{COMBINATIONS[second_move] }"
     end
   end
 

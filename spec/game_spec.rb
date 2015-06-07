@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Game do
   subject(:game) { described_class.new }
-  
+
   describe '#call' do
 
     let(:message) do |example|
@@ -15,6 +15,10 @@ describe Game do
 
     it 'draw' do |example|
       expect(subject.call('rock', 'rock')).to eq(message)
+    end
+
+    it 'paper beats rock' do |example|
+      expect(subject.call('rock' , 'paper')).to eq(message)
     end
   end
 
